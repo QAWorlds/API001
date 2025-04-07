@@ -7,12 +7,8 @@ import static org.hamcrest.Matchers.*;
 
 import java.util.HashMap;
 
-public class HTTP_Request {
+public class HTTP_Request_001 {
 int id;
-
-
-
-
 
 
 
@@ -75,7 +71,7 @@ int id;
     	 given()
        
          .when().delete("https://reqres.in/api/users/"+id) 
-         
+        
          
          
          .then().statusCode(204)
