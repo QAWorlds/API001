@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="API_TESTCASES.OXOAPI_001">
+      <class name="API_TESTCASES.HTTP_Request_001">
         <methods>
-          <include name="APIKey"/>
-          <include name="GetOrderDetails"/>
-          <include name="Ship"/>
+          <include name="PostUser"/>
+          <include name="DeleteUser"/>
+          <include name="PutUser"/>
         </methods>
-      </class> <!-- API_TESTCASES.OXOAPI_001 -->
+      </class> <!-- API_TESTCASES.HTTP_Request_001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -16,8 +16,8 @@ int id;
 
     @Test(priority = 1)
     public void GetUser() {                                     // ✅ Get Data
-        given()
-        .when().get("https://reqres.in/api/users?page=2")
+        given() .baseUri("https://reqres.in/api") 
+        .when().get("/users?page=2")
         .then().statusCode(200)
         .body("page", equalTo(2))
         .log().all();
@@ -33,15 +33,15 @@ int id;
         data.put("name", "aravind");
         data.put("job", "tester");
 
-       id= given()
+     id=  given()
         .contentType("application/json")
         .body(data)
         .when().post("https://reqres.in/api/users") 
         .jsonPath().getInt("id");
         
         
-        // ✅ use POST
-       /* .then().statusCode(201)
+   
+      /*  .then().statusCode(201)
         .log().all();*/
     }
     
